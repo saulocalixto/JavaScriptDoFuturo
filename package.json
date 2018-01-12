@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server",
     "lint": "eslint",
-    "build": "webpack",
+    "build": "webpack --watch --devtool source-map",
     "nodemon": "nodemon"
   },
   "repository": {
@@ -33,6 +33,6 @@
     "eslint-plugin-import": "^2.2.0",
     "http-server": "^0.9.0",
     "nodemon": "^1.11.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.7.0"
   }
 }
