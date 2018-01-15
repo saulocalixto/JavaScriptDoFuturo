@@ -44,12 +44,32 @@ const config = {
       {
         test: /\.s[ac]ss$/,
         loader: extractSass.extract({
-          loader: [
+          use: [
             { loader: 'css-loader' },
             { loader: 'sass-loader' },
           ],
-          fallbackLoader: 'style-loader',
+          fallback: 'style-loader',
         }),
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)/,
+        use: [
+          {
+            loader: 'url-loader',
+            query: {
+              limit: 10000,
+              name: '[name].[hash:8].[ext]',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              mozjpg: {
+                quality: 65,
+              },
+            },
+          },
+        ],
       },
     ],
   },
