@@ -1,0 +1,12 @@
+var myString = 'Saulo';
+var myBoolean = true;
+var myNumber = 10;
+var myArray = ['A', 'B', 'C'];
+var myTuple = ['A', 10];
+var a = undefined;
+console.log(a);
+console.log(myString);
+console.log(myBoolean);
+console.log(myNumber);
+console.log(myArray);
+console.log(myTuple);
