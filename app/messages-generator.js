@@ -1,4 +1,4 @@
-import Message from './model/message.model';
+import Message from './model/message.model.ts';
 
 const generator = () => {
   const messages = [];

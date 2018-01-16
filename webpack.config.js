@@ -44,7 +44,6 @@ const config = {
       minify,
     }),
     extractSass,
-    new UglifyJsWebpackPlugin(),
     new CompressionWebpackPlugin({
       asset: '[path].gz',
     }),
@@ -62,7 +61,7 @@ const config = {
         },
       },
       {
-        test: /\.js$/,
+        test: /\.js|ts$/,
         loader: 'babel-loader',
         options: {
           presets: [
